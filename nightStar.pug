@@ -1,0 +1,158 @@
+doctype html
+html(lang='ko')
+  head
+    title Chan's Pace 
+
+    //resetcss
+    link(href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css" rel="stylesheet")
+    
+    //font
+    link(rel="preconnect" href="https://fonts.googleapis.com")
+    link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+    link(href="https://fonts.googleapis.com/css2?family=Grandiflora+One&display=swap" rel="stylesheet")
+
+    //favicon
+    link(rel="icon" href="../imgs/favicon/planet.png")
+
+    //style
+    link(rel="stylesheet" href="../css/main.css") 
+
+    //p5js
+    script(src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.js")
+    script(src="../script/main.js" defer)    
+    //- script(src="../script/canvas.js" defer)    
+
+  body
+    main
+      nav
+        ul.menu#menu
+          li
+            button#home(data-hover='Home') Home
+          li
+            button#about(data-hover='About') About 
+          li
+            button#project(data-hover='Project') Project 
+          li
+            button#notes(data-hover='Notes') Notes
+          li
+            button#contact(data-hover='Contact') Contact
+      div.nightWrap#nightWrap
+        svg(viewBox="-200 -80 1200 300")
+          text(text-anchor="end-alignment") Chan's Pace
+        div.introBox
+          h2.introText #
+            span.highLight 가능성은 
+            |#우주의 별만큼<br>#
+            span.highLight 열정은 
+            |#태양의 열기만큼
+
+        div.introduceBox
+          div.record
+            h1 이력
+            p 2013.10 전역<br>
+              |2014.06 ~ 2014.10 골프장 아르바이트<br>
+              |2015.03 ~ 2015.12 초경량 비행장치(드론)반 수료<br>
+              |2016.01 ~ 2020.05 드론 자격증 취득, 지도조종자 취득 및 교육원 강사와 방제활동<br> 
+              |2020.06 ~ 2020.12 재료연구소 아르바이트<br>
+              |2021.06 ~ 2021.12 웹 퍼블리셔 초급반 수료<br>
+              |2022.01 ~ 2023.01 레이렙(it회사) 근무<br>
+              |2023.06 ~ 2023.10 방과후교사(드론)<br>
+              |2024.01 ~ 현재 라인아트컴퓨터학원에서 교육중.<br>
+          div.license
+            h1 자격증
+            p - 면허증(대형)<br>
+              |- 초경량 무인비행장치 조종 자격증<br>
+              |- 초경량 무인비행장치 지도조종자 자격증<br>
+              |- 방과후 교사 자격증<br>
+              |- 캘리그라피 1급 자격증(민간)<br>
+              |- 명리심리상담사 2급 자격증(민간)<br>
+        div.imageWrap
+          div.image.youngImg0
+          div.image.image1
+          div.image.image2
+          div.image.image3
+          div.image.planet1
+          div.image.planet2
+          div.image.planet3
+
+        div.projectWrap
+          div.projectCard.card1
+            a.mainCard(href="../../matrixCalculator/matrixCalculator.html")
+              h2 행렬계산기 
+              p.description 행렬계산을 위한 웹사이트입니다.
+              div.tokenInfo
+                div.price
+                  p 바로가기 
+                div.duration
+                  p  
+              .creator
+                p
+                  ins made by 
+                  | 박찬우 
+          div.projectCard.card2
+            a.mainCard(href="../../canvas.html")
+              h2 Draw Graph.
+              p.description 평균점수, 최고점, 최저점을 구하는 사이트입니다. 
+              div.tokenInfo
+                div.price
+                  p 바로가기 
+              .creator
+                p
+                  ins made by 
+                  | 박찬우 
+          div.projectCard.card3
+            a.mainCard(href="../../../lineCom/homework/starLight.html")
+              //img.tokenImage(src="https://images.unsplash.com/photo-1621075160523-b936ad96132a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80", alt="NFT")
+              h2 밤하늘의 별을 따서.. 
+              p.description text description.
+              div.tokenInfo
+                div.price
+                  p 바로가기 
+              .creator
+                p
+                  ins made by 
+                  | 박찬우 
+          div.projectCard.card4
+            a.mainCard(href="../../../lineCom/homework/starLight.html")
+              //img.tokenImage(src="https://images.unsplash.com/photo-1621075160523-b936ad96132a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80", alt="NFT")
+              h2 밤하늘의 별을 따서.. 
+              p.description text description.
+              div.tokenInfo
+                div.price
+                  p 바로가기 
+              .creator
+                p
+                  ins Creation of
+                  |  Kiberbash
+        div.satelliteWrap  
+          div.satellites#satellites
+            img.satellite#img1(style="--i: 20; top: 80px" src="../imgs/icons/css3.svg")
+            img.satellite#img2(style="--i: 40; top: 120px" src="../imgs/icons/create-react-app.svg")
+            img.satellite#img3(style="--i: 60; top: 70px" src="../imgs/icons/django.svg")
+            img.satellite#img4(style="--i: 80; top: 10px" src="../imgs/icons/docker.svg")
+            img.satellite#img5(style="--i: 100; top: 90px" src="../imgs/icons/bootstrap.svg")
+            img.satellite#img6(style="--i: 120; top: 40px" src="../imgs/icons/figma.svg")
+            img.satellite#img7(style="--i: 140; top: 30px" src="../imgs/icons/git.svg")
+            img.satellite#img8(style="--i: 160; top: 20px" src="../imgs/icons/express.svg")
+            img.satellite#img9(style="--i: 180; top: 90px" src="../imgs/icons/html5.svg")
+            img.satellite#img10(style="--i: 200; top: 110px" src="../imgs/icons/javascript.svg")
+            img.satellite#img11(style="--i: 220; top: 20px" src="../imgs/icons/jquery.svg")
+            img.satellite#img12(style="--i: 240; top: 70px" src="../imgs/icons/npm.svg")
+            img.satellite#img13(style="--i: 260; top: 80px" src="../imgs/icons/vim.svg")
+            img.satellite#img14(style="--i: 280; top: 10px" src="../imgs/icons/yarn.svg")
+            img.satellite#img15(style="--i: 300; top: 20px" src="../imgs/icons/ubuntu.svg")
+          .explainWrap#explainWrap
+        div.contactWrap
+          div.postMan
+          div.postManShadow
+          //h1 contact Wrap입니다.
+          div.telNumber 
+            span Tel:
+            |010.5215.4934
+          div.email 
+            span Address:
+            |mmkr4934@naver.com
+          div.thanks 감사합니다:&#41;
+          div.groundArea#groundArea
+
+

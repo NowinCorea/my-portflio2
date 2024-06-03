@@ -1,0 +1,1385 @@
+@keyframes rotate-axis {
+  from {
+    transform: rotateZ(350deg) perspective(800px) rotateY(0deg);
+  }
+  to {
+    transform: rotateZ(350deg) perspective(800px) rotateY(360deg);
+  }
+}
+@keyframes blinkMoonLight {
+  from {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes stroke {
+  0% {
+    stroke-dashoffset: 25%;
+    stroke-dasharray: 0 50%;
+    fill: rgba(72, 138, 204, 0);
+    stroke: #fff;
+    stroke-width: 2;
+  }
+  70% {
+    fill: rgba(72, 138, 204, 0);
+    stroke: #fff;
+  }
+  80% {
+    fill: rgba(72, 138, 204, 0);
+    stroke: #fff;
+  }
+  100% {
+    stroke-dashoffset: -25%;
+    stroke-dasharray: 50% 0;
+    fill: #fff;
+    stroke: #fff;
+    stroke-width: 0;
+  }
+}
+@keyframes movingPic {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(30deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+@media (min-width: 1400px) {
+  html {
+    scroll-behavior: smooth;
+  }
+  html body {
+    font-family: "Orbit", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  html body main {
+    min-width: 1200px;
+    height: 4000px; /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #012647, #000428); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    margin: 0 auto;
+  }
+  html body main nav {
+    z-index: 2;
+    top: 0;
+    position: sticky;
+    color: #fff;
+  }
+  html body main nav ul.menu {
+    color: rgba(255, 255, 255, 0.5);
+    list-style-type: none;
+    margin-top: 20px;
+    margin-right: 28px;
+    padding: 0;
+    overflow: hidden;
+    float: right;
+    transition: all 0.3s;
+  }
+  html body main nav ul.active > li > button:before {
+    background-color: #FF9800;
+  }
+  html body main nav ul li {
+    margin: 0 5px;
+    width: 120px;
+    float: left;
+  }
+  html body main nav ul li button {
+    font-size: 0;
+    background: transparent;
+    border: 0;
+  }
+  html body main nav ul li button:before {
+    border-radius: 5px;
+    padding: 4px;
+    text-align: center;
+    width: 104px;
+    font-size: 22px;
+    color: #fff;
+    content: attr(data-hover);
+    position: absolute;
+    transition: all 0.3s;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  html body main nav ul li button:hover:before, html body main nav ul li button:focus:before {
+    transform: scale(0.9);
+  }
+  html body main .nightWrap {
+    position: relative;
+    z-index: 1;
+  }
+  html body main .nightWrap svg {
+    font-size: 62px;
+    font-weight: bold;
+    position: absolute;
+    right: 25%;
+    top: 0;
+    text-transform: uppercase;
+    animation: stroke 5s 1 alternate;
+    fill: #fff;
+  }
+  html body main .nightWrap .introBox {
+    position: absolute;
+    width: 600px;
+    height: 120px;
+    width: 410px;
+    top: 150px;
+    left: 13%;
+  }
+  html body main .nightWrap .introBox > h2.introText {
+    width: 100%;
+    position: relative;
+    color: #fff;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 62px;
+  }
+  html body main .nightWrap .introBox > h2.introText .highLight {
+    font-size: 42px;
+    color: #22ff00;
+  }
+  html body main .nightWrap .introBox .colorGreen {
+    color: #007F73;
+  }
+  html body main .nightWrap .introduceBox {
+    width: 50%;
+    height: 500px;
+    position: absolute;
+    top: 1280px;
+    left: 50%;
+    z-index: 1;
+    text-align: left;
+  }
+  html body main .nightWrap .introduceBox .record h1, html body main .nightWrap .introduceBox .license h1 {
+    width: 100%;
+    position: relative;
+    color: #00a495;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 62px;
+  }
+  html body main .nightWrap .introduceBox .record p, html body main .nightWrap .introduceBox .license p {
+    font-size: 24px;
+    font-weight: 100;
+    color: #fff;
+    line-height: 40px;
+    margin-right: 20px;
+  }
+  html body main .nightWrap .imageWrap {
+    position: relative;
+  }
+  html body main .nightWrap .imageWrap .image {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    border: 10px solid #ffffff;
+  }
+  html body main .nightWrap .imageWrap .youngImg0 {
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    background: url("../imgs/young0.png") no-repeat center;
+    background-size: cover;
+    border: 10px solid #fff;
+    border-radius: 50%;
+    top: 130px;
+    right: 300px;
+    animation: opacityImg 3s ease-in infinite;
+    animation-direction: alternate;
+  }
+  html body main .nightWrap .imageWrap .image1 {
+    top: 370px;
+    right: 390px;
+    transform: rotate(-25deg);
+    background: url("../imgs/pic1.jpg") no-repeat center;
+    background-size: contain;
+    animation: movingPic 5s infinite;
+  }
+  html body main .nightWrap .imageWrap .image2 {
+    top: 730px;
+    right: 100px;
+    transform: rotate(20deg);
+    background: url("../imgs/pic2.jpg") no-repeat center;
+    background-size: contain;
+  }
+  html body main .nightWrap .imageWrap .image3 {
+    top: 1300px;
+    left: 10%;
+    width: 450px;
+    height: 450px;
+    background: url("../imgs/pic3.jpg") no-repeat center;
+    background-size: contain;
+  }
+  html body main .nightWrap .imageWrap .planet1 {
+    top: 470px;
+    left: 130px;
+    background: url("../imgs/planets/planet1.svg") no-repeat center;
+    background-size: contain;
+    border: 0;
+  }
+  html body main .nightWrap .imageWrap .planet2 {
+    width: 150px;
+    height: 150px;
+    top: 730px;
+    left: 500px;
+    background: url("../imgs/planets/planet2.svg") no-repeat center;
+    background-size: contain;
+    border: 0;
+  }
+  html body main .nightWrap .imageWrap .planet3 {
+    width: 150px;
+    height: 150px;
+    top: 450px;
+    right: 100px;
+    background: url("../imgs/planets/planet3.svg") no-repeat center;
+    background-size: contain;
+    border: 0;
+  }
+  html body main .nightWrap .projectWrap {
+    display: flex;
+    font-size: 26px;
+    color: #fff;
+    font-weight: bold;
+    position: absolute;
+    top: 2000px;
+    width: 100%;
+  }
+  html body main .nightWrap .projectWrap .projectCard {
+    width: calc(20% - 20px);
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
+    margin: 5rem auto;
+    border: 1px solid rgba(255, 255, 255, 0.1333333333);
+    background-color: #282c34;
+    background: linear-gradient(0deg, rgb(40, 44, 52) 0%, rgba(17, 0, 32, 0.5) 100%);
+    box-shadow: 0 7px 20px 5px rgba(255, 255, 255, 0.2);
+    border-radius: 0.7rem;
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    overflow: hidden;
+    opacity: 0.7;
+  }
+  html body main .nightWrap .projectWrap .projectCard .mainCard {
+    color: #fff455;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    text-decoration-line: none;
+    width: 90%;
+    height: 300px;
+    padding: 1rem;
+    transition: all 0.2s;
+  }
+  html body main .nightWrap .projectWrap .projectCard .mainCard > h2 {
+    margin-top: -20px;
+  }
+  html body main .nightWrap .projectWrap .projectCard .mainCard .description {
+    font-size: 20px;
+    margin: 0.5rem 0;
+    line-height: 32px;
+    color: #fff;
+  }
+  html body main .nightWrap .projectWrap .projectCard .mainCard .tokenInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  html body main .nightWrap .projectWrap .projectCard .mainCard .tokenInfo .price {
+    display: flex;
+    align-items: center;
+    color: #ee83e5;
+    font-weight: 700;
+  }
+  html body main .nightWrap .projectWrap .projectCard .mainCard .tokenInfo .price ins {
+    margin-left: -0.3rem;
+    margin-right: 0.5rem;
+  }
+  html body main .nightWrap .projectWrap .projectCard .mainCard .tokenInfo .duration {
+    display: flex;
+    align-items: center;
+    color: #a89ec9;
+    margin-right: 0.2rem;
+  }
+  html body main .nightWrap .projectWrap .projectCard .mainCard .tokenInfo .duration ins {
+    margin: 0.5rem;
+    margin-bottom: 0.4rem;
+  }
+  html body main .nightWrap .projectWrap .projectCard .mainCard .creator {
+    display: flex;
+    align-items: center;
+    margin-bottom: -20px;
+  }
+  html body main .nightWrap .projectWrap .projectCard .mainCard .creator ins {
+    color: #a89ec9;
+    text-decoration: none;
+  }
+  html body main .nightWrap .projectWrap .projectCard .mainCard .creator .wrapper {
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.1333333333);
+    padding: 0.3rem;
+    margin: 0;
+    margin-right: 0.5rem;
+    border-radius: 100%;
+    box-shadow: inset 0 0 0 4px rgba(0, 0, 0, 0.6666666667);
+  }
+  html body main .nightWrap .projectWrap .projectCard .mainCard .creator .wrapper img {
+    border-radius: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.1333333333);
+    width: 2rem;
+    height: 2rem;
+    -o-object-fit: cover;
+       object-fit: cover;
+    margin: 0;
+  }
+  html body main .nightWrap .projectWrap .projectCard .mainCard:visited {
+    color: #fff455;
+  }
+  html body main .nightWrap .projectWrap .projectCard ::before {
+    position: fixed;
+    content: "";
+    box-shadow: 0 0 100px 40px rgba(255, 255, 255, 0.031372549);
+    top: -10%;
+    left: -100%;
+    transform: rotate(-45deg);
+    height: 60rem;
+    transition: 0.7s all;
+  }
+  html body main .nightWrap .projectWrap .projectCard:hover {
+    opacity: 1;
+    border: 1px solid rgba(255, 255, 255, 0.2666666667);
+    box-shadow: 0 7px 50px 10px rgba(255, 255, 255, 0.2);
+    transform: scale(1.015);
+  }
+  html body main .nightWrap .projectWrap .projectCard:hover .mainCard .description {
+    opacity: 0;
+  }
+  html body main .nightWrap .projectWrap .projectCard:hover .mainCard .tokenInfo {
+    opacity: 0;
+  }
+  html body main .nightWrap .projectWrap .projectCard.card1:hover {
+    background: url("../imgs/projectBg1.png") no-repeat center;
+    background-size: contain;
+  }
+  html body main .nightWrap .projectWrap .projectCard.card2:hover {
+    background: url("../imgs/projectBg2.png") no-repeat center;
+    background-size: contain;
+  }
+  html body main .nightWrap .satelliteWrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 2800px;
+  }
+  html body main .nightWrap .satelliteWrap .satellites {
+    position: absolute;
+    animation: rotate-axis 30s linear infinite;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+  }
+  html body main .nightWrap .satelliteWrap .satellites .satellite {
+    position: absolute;
+    width: 80px;
+    transform: rotateY(calc(var(--i) * 1deg)) translateZ(500px);
+    transition: all 0.2s;
+  }
+  html body main .nightWrap .satelliteWrap .satellites .satellite:hover {
+    width: 100px;
+  }
+  html body main .nightWrap .satelliteWrap .explainWrap {
+    position: absolute;
+    right: 20%;
+    top: -50px;
+    width: 30%;
+    height: 300px;
+    color: #fff;
+  }
+  html body main .nightWrap .satelliteWrap .explainWrap > h1 {
+    font-size: 34px;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  html body main .nightWrap .satelliteWrap .explainWrap > p {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  html body main .nightWrap .contactWrap {
+    overflow: hidden;
+    font-size: 26px;
+    font-weight: bold;
+    position: absolute;
+    top: 3500px;
+    width: 100%;
+    color: #fff;
+    height: 500px;
+  }
+  html body main .nightWrap .contactWrap .postMan {
+    position: absolute;
+    top: 10%;
+    right: 8%;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #fff455;
+    background-size: contain;
+  }
+  html body main .nightWrap .contactWrap .postManShadow {
+    position: absolute;
+    top: 10%;
+    right: 8%;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    animation: blinkMoonLight linear 3s infinite;
+    box-shadow: 0 0 20px #fff;
+  }
+  html body main .nightWrap .contactWrap .telNumber {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    letter-spacing: 12px;
+  }
+  html body main .nightWrap .contactWrap .telNumber > span {
+    letter-spacing: 0;
+    margin-right: 12px;
+  }
+  html body main .nightWrap .contactWrap .email {
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    letter-spacing: 12px;
+  }
+  html body main .nightWrap .contactWrap .email > span {
+    letter-spacing: 0;
+    margin-right: 12px;
+  }
+  html body main .nightWrap .contactWrap .thanks {
+    position: absolute;
+    top: 60%;
+    left: 60%;
+    letter-spacing: 12px;
+  }
+  html body main .nightWrap .contactWrap .groundArea {
+    position: absolute;
+    bottom: 0;
+    height: 80px;
+    width: 100vw;
+  }
+  html body main .nightWrap .contactWrap .groundArea div[class^=building] {
+    position: absolute;
+    background-color: #0f1035;
+    bottom: 0;
+    height: 40px;
+  }
+  html body main .nightWrap .contactWrap .groundArea div[class^=windows] {
+    display: flex;
+    top: 8px;
+    left: 8px;
+    width: 80%;
+    height: 40px;
+    margin: 10%;
+  }
+  html body main .nightWrap .contactWrap .groundArea div[class^=windowside] {
+    height: 12px;
+    margin: 4px;
+    background-color: #dcf2f1;
+  }
+  html body main > canvas {
+    position: absolute;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 600px) and (max-width: 1399.99px) {
+  html {
+    scroll-behavior: smooth;
+    background-color: coral;
+  }
+  html body {
+    font-family: "Nanum Gothic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  html body main {
+    overflow-x: hidden;
+    height: 5000px; /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #012647, #000428); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    margin: 0 auto;
+  }
+  html body main nav {
+    z-index: 2;
+    top: 0;
+    position: sticky;
+    color: #fff;
+  }
+  html body main nav ul.menu {
+    color: rgba(255, 255, 255, 0.5);
+    list-style-type: none;
+    margin-top: 20px;
+    margin-right: 28px;
+    padding: 0;
+    overflow: hidden;
+    float: right;
+    transition: all 0.3s;
+  }
+  html body main nav ul.active > li > button:before {
+    background-color: #FF9800;
+  }
+  html body main nav ul li {
+    margin: 0;
+    width: 110px;
+    float: left;
+  }
+  html body main nav ul li button {
+    font-size: 0;
+    background: transparent;
+    border: 0;
+  }
+  html body main nav ul li button:before {
+    border-radius: 5px;
+    padding-bottom: 4px;
+    text-align: center;
+    width: 104px;
+    font-size: 22px;
+    color: #fff;
+    content: attr(data-hover);
+    position: absolute;
+    transition: all 0.3s;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  html body main nav ul li button:hover:before, html body main nav ul li button:focus:before {
+    transform: scale(0.9);
+  }
+  html body main .nightWrap {
+    position: relative;
+    z-index: 1;
+  }
+  html body main .nightWrap svg {
+    font-size: 62px;
+    font-weight: bold;
+    position: absolute;
+    right: 25%;
+    top: 0;
+    transform: translateX(-50px);
+    text-transform: uppercase;
+    animation: stroke 5s 1 alternate;
+    fill: #fff;
+  }
+  html body main .nightWrap .introBox {
+    position: absolute;
+    width: 600px;
+    height: 120px;
+    width: 410px;
+    top: 150px;
+    left: 13%;
+  }
+  html body main .nightWrap .introBox > h2.introText {
+    width: 100%;
+    font-family: "Nanum Gothic", sans-serif;
+    position: relative;
+    color: #fff;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 62px;
+  }
+  html body main .nightWrap .introBox > h2.introText .highLight {
+    font-size: 42px;
+    color: #22ff00;
+  }
+  html body main .nightWrap .introBox .colorGreen {
+    color: #007F73;
+  }
+  html body main .nightWrap .introduceBox {
+    width: 80%;
+    height: 500px;
+    position: absolute;
+    top: 1800px;
+    left: 50%;
+    z-index: 1;
+    text-align: left;
+    transform: translateX(-50%);
+  }
+  html body main .nightWrap .introduceBox .record h1, html body main .nightWrap .introduceBox .license h1 {
+    width: 100%;
+    position: relative;
+    color: #fff;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 62px;
+  }
+  html body main .nightWrap .introduceBox .record p, html body main .nightWrap .introduceBox .license p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    line-height: 30px;
+  }
+  html body main .nightWrap .imageWrap {
+    position: relative;
+  }
+  html body main .nightWrap .imageWrap .image {
+    position: absolute;
+    width: 40vw;
+    height: 40vh;
+  }
+  html body main .nightWrap .imageWrap .youngImg0 {
+    display: none;
+  }
+  html body main .nightWrap .imageWrap .image1 {
+    top: 370px;
+    right: 100px;
+    transform: rotate(-25deg);
+    background: url("../imgs/pic1.jpg") no-repeat center;
+    background-size: contain;
+  }
+  html body main .nightWrap .imageWrap .image2 {
+    top: 730px;
+    right: 100px;
+    transform: rotate(20deg);
+    background: url("../imgs/pic2.jpg") no-repeat center;
+    background-size: contain;
+  }
+  html body main .nightWrap .imageWrap .image3 {
+    top: 1300px;
+    left: 50%;
+    width: 450px;
+    height: 450px;
+    background: url("../imgs/pic3.jpg") no-repeat center;
+    background-size: contain;
+    transform: translateX(-50%);
+  }
+  html body main .nightWrap .imageWrap .planet1 {
+    top: 470px;
+    left: 13%;
+    background: url("../imgs/planets/planet1.svg") no-repeat center;
+    background-size: contain;
+    border: 0;
+  }
+  html body main .nightWrap .imageWrap .planet2 {
+    width: 20vw;
+    height: 20vh;
+    top: 730px;
+    left: 100px;
+    background: url("../imgs/planets/planet2.svg") no-repeat center;
+    background-size: contain;
+    border: 0;
+  }
+  html body main .nightWrap .imageWrap .planet3 {
+    display: none;
+    width: 150px;
+    height: 150px;
+    top: 450px;
+    right: 100px;
+    background: url("../imgs/planets/planet3.svg") no-repeat center;
+    background-size: contain;
+    border: 0;
+  }
+  html body main .nightWrap .projectWrap {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 26px;
+    color: #fff;
+    font-weight: bold;
+    position: absolute;
+    top: 3500px;
+    width: 100%;
+  }
+  html body main .nightWrap .projectWrap .projectCard {
+    width: calc(50% - 44px);
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
+    margin: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1333333333);
+    background-color: #282c34;
+    background: linear-gradient(0deg, rgb(40, 44, 52) 0%, rgba(17, 0, 32, 0.5) 100%);
+    box-shadow: 0 7px 20px 5px rgba(255, 255, 255, 0.2);
+    border-radius: 0.7rem;
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    overflow: hidden;
+    opacity: 0.7;
+  }
+  html body main .nightWrap .projectWrap .projectCard .mainCard {
+    color: #fff455;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    text-decoration-line: none;
+    width: 90%;
+    height: 300px;
+    padding: 1rem;
+    transition: all 0.2s;
+  }
+  html body main .nightWrap .projectWrap .projectCard .mainCard > h2 {
+    margin-top: -20px;
+  }
+  html body main .nightWrap .projectWrap .projectCard .mainCard .description {
+    font-size: 20px;
+    margin: 0.5rem 0;
+    line-height: 32px;
+    color: #fff;
+  }
+  html body main .nightWrap .projectWrap .projectCard .mainCard .tokenInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  html body main .nightWrap .projectWrap .projectCard .mainCard .tokenInfo .price {
+    display: flex;
+    align-items: center;
+    color: #ee83e5;
+    font-weight: 700;
+  }
+  html body main .nightWrap .projectWrap .projectCard .mainCard .tokenInfo .price ins {
+    margin-left: -0.3rem;
+    margin-right: 0.5rem;
+  }
+  html body main .nightWrap .projectWrap .projectCard .mainCard .tokenInfo .duration {
+    display: flex;
+    align-items: center;
+    color: #a89ec9;
+    margin-right: 0.2rem;
+  }
+  html body main .nightWrap .projectWrap .projectCard .mainCard .tokenInfo .duration ins {
+    margin: 0.5rem;
+    margin-bottom: 0.4rem;
+  }
+  html body main .nightWrap .projectWrap .projectCard .mainCard .creator {
+    display: flex;
+    align-items: center;
+    margin-bottom: -20px;
+  }
+  html body main .nightWrap .projectWrap .projectCard .mainCard .creator ins {
+    color: #a89ec9;
+    text-decoration: none;
+  }
+  html body main .nightWrap .projectWrap .projectCard .mainCard .creator .wrapper {
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.1333333333);
+    padding: 0.3rem;
+    margin: 0;
+    margin-right: 0.5rem;
+    border-radius: 100%;
+    box-shadow: inset 0 0 0 4px rgba(0, 0, 0, 0.6666666667);
+  }
+  html body main .nightWrap .projectWrap .projectCard .mainCard .creator .wrapper img {
+    border-radius: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.1333333333);
+    width: 2rem;
+    height: 2rem;
+    -o-object-fit: cover;
+       object-fit: cover;
+    margin: 0;
+  }
+  html body main .nightWrap .projectWrap .projectCard .mainCard:visited {
+    color: #fff455;
+  }
+  html body main .nightWrap .projectWrap .projectCard ::before {
+    position: fixed;
+    content: "";
+    box-shadow: 0 0 100px 40px rgba(255, 255, 255, 0.031372549);
+    top: -10%;
+    left: -100%;
+    transform: rotate(-45deg);
+    height: 60rem;
+    transition: 0.7s all;
+  }
+  html body main .nightWrap .projectWrap .projectCard:hover {
+    opacity: 1;
+    border: 1px solid rgba(255, 255, 255, 0.2666666667);
+    box-shadow: 0 7px 50px 10px rgba(255, 255, 255, 0.2);
+    transform: scale(1.015);
+  }
+  html body main .nightWrap .projectWrap .projectCard:hover .mainCard .description {
+    opacity: 0;
+  }
+  html body main .nightWrap .projectWrap .projectCard:hover .mainCard .tokenInfo {
+    opacity: 0;
+  }
+  html body main .nightWrap .projectWrap .projectCard.card1:hover {
+    background: url("../imgs/projectBg1.png") no-repeat center;
+    background-size: contain;
+  }
+  html body main .nightWrap .projectWrap .projectCard.card2:hover {
+    background: url("../imgs/projectBg2.png") no-repeat center;
+    background-size: contain;
+  }
+  html body main .nightWrap .satelliteWrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 2500px;
+    left: 300px;
+  }
+  html body main .nightWrap .satelliteWrap .satellites {
+    position: absolute;
+    animation: rotate-axis 30s linear infinite;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+  }
+  html body main .nightWrap .satelliteWrap .satellites .satellite {
+    position: absolute;
+    width: 60px;
+    transform: rotateY(calc(var(--i) * 1deg)) translateZ(300px);
+    transition: all 0.2s;
+  }
+  html body main .nightWrap .satelliteWrap .satellites .satellite:hover {
+    width: 80px;
+  }
+  html body main .nightWrap .satelliteWrap .explainWrap {
+    position: absolute;
+    left: -200px;
+    top: 350px;
+    width: 80%;
+    height: 300px;
+    color: #fff;
+  }
+  html body main .nightWrap .satelliteWrap .explainWrap > h1 {
+    font-size: 34px;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  html body main .nightWrap .satelliteWrap .explainWrap > p {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  html body main .nightWrap .contactWrap {
+    overflow: hidden;
+    font-size: 26px;
+    font-weight: bold;
+    position: absolute;
+    top: 4500px;
+    width: 100%;
+    color: #fff;
+    height: 500px;
+  }
+  html body main .nightWrap .contactWrap .postMan {
+    position: absolute;
+    top: 10%;
+    right: 8%;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #fff455;
+    background-size: contain;
+  }
+  html body main .nightWrap .contactWrap .postManShadow {
+    position: absolute;
+    top: 10%;
+    right: 8%;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    animation: blinkMoonLight linear 3s infinite;
+    box-shadow: 0 0 20px #fff;
+  }
+  html body main .nightWrap .contactWrap .telNumber {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    letter-spacing: 4px;
+  }
+  html body main .nightWrap .contactWrap .telNumber > span {
+    letter-spacing: 0;
+    margin-right: 12px;
+  }
+  html body main .nightWrap .contactWrap .email {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    letter-spacing: 4px;
+  }
+  html body main .nightWrap .contactWrap .email > span {
+    letter-spacing: 0;
+    margin-right: 12px;
+  }
+  html body main .nightWrap .contactWrap .thanks {
+    position: absolute;
+    top: 60%;
+    left: 60%;
+    letter-spacing: 4px;
+  }
+  html body main .nightWrap .contactWrap .groundArea {
+    position: absolute;
+    bottom: 0;
+    height: 80px;
+    width: 100vw;
+  }
+  html body main .nightWrap .contactWrap .groundArea div[class^=building] {
+    position: absolute;
+    background-color: #0f1035;
+    bottom: 0;
+    height: 40px;
+  }
+  html body main .nightWrap .contactWrap .groundArea div[class^=windows] {
+    display: flex;
+    top: 8px;
+    left: 8px;
+    width: 80%;
+    height: 40px;
+    margin: 10%;
+  }
+  html body main .nightWrap .contactWrap .groundArea div[class^=windowside] {
+    height: 12px;
+    margin: 4px;
+    background-color: #dcf2f1;
+  }
+  html body main > canvas {
+    height: 5000px;
+    position: absolute;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 600px) {
+  html {
+    scroll-behavior: smooth;
+    background-color: cornflowerblue;
+  }
+  html body {
+    font-family: "Nanum Gothic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  html body main {
+    overflow-x: hidden;
+    height: 5000px; /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #012647, #000428); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    margin: 0 auto;
+  }
+  html body main nav {
+    z-index: 2;
+    top: 0;
+    position: sticky;
+    color: #fff;
+  }
+  html body main nav ul.menu {
+    color: rgba(255, 255, 255, 0.5);
+    list-style-type: none;
+    margin-top: 20px;
+    margin-right: 28px;
+    padding: 0;
+    overflow: hidden;
+    float: right;
+    transition: all 0.3s;
+  }
+  html body main nav ul.active > li > button:before {
+    background-color: #FF9800;
+  }
+  html body main nav ul li {
+    margin: 0;
+    width: 110px;
+    float: left;
+  }
+  html body main nav ul li button {
+    font-size: 0;
+    background: transparent;
+    border: 0;
+  }
+  html body main nav ul li button:before {
+    border-radius: 5px;
+    padding-bottom: 4px;
+    text-align: center;
+    width: 104px;
+    font-size: 22px;
+    color: #fff;
+    content: attr(data-hover);
+    position: absolute;
+    transition: all 0.3s;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  html body main nav ul li button:hover:before, html body main nav ul li button:focus:before {
+    transform: scale(0.9);
+  }
+  html body main .nightWrap {
+    position: relative;
+    z-index: 1;
+  }
+  html body main .nightWrap svg {
+    font-size: 62px;
+    font-weight: bold;
+    position: absolute;
+    right: 25%;
+    top: 0;
+    transform: translateX(-50px);
+    text-transform: uppercase;
+    animation: stroke 5s 1 alternate;
+    fill: #fff;
+  }
+  html body main .nightWrap .introBox {
+    position: absolute;
+    width: 600px;
+    height: 120px;
+    width: 410px;
+    top: 150px;
+    left: 13%;
+  }
+  html body main .nightWrap .introBox > h2.introText {
+    width: 100%;
+    font-family: "Nanum Gothic", sans-serif;
+    position: relative;
+    color: #fff;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 62px;
+  }
+  html body main .nightWrap .introBox > h2.introText .highLight {
+    font-size: 42px;
+    color: #22ff00;
+  }
+  html body main .nightWrap .introBox .colorGreen {
+    color: #007F73;
+  }
+  html body main .nightWrap .introduceBox {
+    width: 80%;
+    height: 500px;
+    position: absolute;
+    top: 1800px;
+    left: 50%;
+    z-index: 1;
+    text-align: left;
+    transform: translateX(-50%);
+  }
+  html body main .nightWrap .introduceBox .record h1, html body main .nightWrap .introduceBox .license h1 {
+    width: 100%;
+    position: relative;
+    color: #fff;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 62px;
+  }
+  html body main .nightWrap .introduceBox .record p, html body main .nightWrap .introduceBox .license p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    line-height: 30px;
+  }
+  html body main .nightWrap .imageWrap {
+    position: relative;
+  }
+  html body main .nightWrap .imageWrap .image {
+    position: absolute;
+    width: 80vw;
+    height: 80vh;
+  }
+  html body main .nightWrap .imageWrap .youngImg0 {
+    display: none;
+  }
+  html body main .nightWrap .imageWrap .image1 {
+    top: 370px;
+    right: 100px;
+    background: url("../imgs/pic1.jpg") no-repeat center;
+    background-size: contain;
+  }
+  html body main .nightWrap .imageWrap .image2 {
+    top: 730px;
+    right: 100px;
+    background: url("../imgs/pic2.jpg") no-repeat center;
+    background-size: contain;
+  }
+  html body main .nightWrap .imageWrap .image3 {
+    top: 1300px;
+    left: 50%;
+    width: 450px;
+    height: 450px;
+    background: url("../imgs/pic3.jpg") no-repeat center;
+    background-size: contain;
+    transform: translateX(-50%);
+  }
+  html body main .nightWrap .imageWrap .planet1 {
+    top: 470px;
+    left: 13%;
+    background: url("../imgs/planets/planet1.svg") no-repeat center;
+    background-size: contain;
+    border: 0;
+  }
+  html body main .nightWrap .imageWrap .planet2 {
+    width: 20vw;
+    height: 20vh;
+    top: 730px;
+    left: 100px;
+    background: url("../imgs/planets/planet2.svg") no-repeat center;
+    background-size: contain;
+    border: 0;
+  }
+  html body main .nightWrap .imageWrap .planet3 {
+    display: none;
+    width: 150px;
+    height: 150px;
+    top: 450px;
+    right: 100px;
+    background: url("../imgs/planets/planet3.svg") no-repeat center;
+    background-size: contain;
+    border: 0;
+  }
+  html body main .nightWrap .projectWrap {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 26px;
+    color: #fff;
+    font-weight: bold;
+    position: absolute;
+    top: 3500px;
+    width: 100%;
+  }
+  html body main .nightWrap .projectWrap .projectCard {
+    width: calc(50% - 44px);
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
+    margin: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1333333333);
+    background-color: #282c34;
+    background: linear-gradient(0deg, rgb(40, 44, 52) 0%, rgba(17, 0, 32, 0.5) 100%);
+    box-shadow: 0 7px 20px 5px rgba(255, 255, 255, 0.2);
+    border-radius: 0.7rem;
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    overflow: hidden;
+    opacity: 0.7;
+  }
+  html body main .nightWrap .projectWrap .projectCard .mainCard {
+    color: #fff455;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    text-decoration-line: none;
+    width: 90%;
+    height: 300px;
+    padding: 1rem;
+    transition: all 0.2s;
+  }
+  html body main .nightWrap .projectWrap .projectCard .mainCard > h2 {
+    margin-top: -20px;
+  }
+  html body main .nightWrap .projectWrap .projectCard .mainCard .description {
+    font-size: 20px;
+    margin: 0.5rem 0;
+    line-height: 32px;
+    color: #fff;
+  }
+  html body main .nightWrap .projectWrap .projectCard .mainCard .tokenInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  html body main .nightWrap .projectWrap .projectCard .mainCard .tokenInfo .price {
+    display: flex;
+    align-items: center;
+    color: #ee83e5;
+    font-weight: 700;
+  }
+  html body main .nightWrap .projectWrap .projectCard .mainCard .tokenInfo .price ins {
+    margin-left: -0.3rem;
+    margin-right: 0.5rem;
+  }
+  html body main .nightWrap .projectWrap .projectCard .mainCard .tokenInfo .duration {
+    display: flex;
+    align-items: center;
+    color: #a89ec9;
+    margin-right: 0.2rem;
+  }
+  html body main .nightWrap .projectWrap .projectCard .mainCard .tokenInfo .duration ins {
+    margin: 0.5rem;
+    margin-bottom: 0.4rem;
+  }
+  html body main .nightWrap .projectWrap .projectCard .mainCard .creator {
+    display: flex;
+    align-items: center;
+    margin-bottom: -20px;
+  }
+  html body main .nightWrap .projectWrap .projectCard .mainCard .creator ins {
+    color: #a89ec9;
+    text-decoration: none;
+  }
+  html body main .nightWrap .projectWrap .projectCard .mainCard .creator .wrapper {
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.1333333333);
+    padding: 0.3rem;
+    margin: 0;
+    margin-right: 0.5rem;
+    border-radius: 100%;
+    box-shadow: inset 0 0 0 4px rgba(0, 0, 0, 0.6666666667);
+  }
+  html body main .nightWrap .projectWrap .projectCard .mainCard .creator .wrapper img {
+    border-radius: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.1333333333);
+    width: 2rem;
+    height: 2rem;
+    -o-object-fit: cover;
+       object-fit: cover;
+    margin: 0;
+  }
+  html body main .nightWrap .projectWrap .projectCard .mainCard:visited {
+    color: #fff455;
+  }
+  html body main .nightWrap .projectWrap .projectCard ::before {
+    position: fixed;
+    content: "";
+    box-shadow: 0 0 100px 40px rgba(255, 255, 255, 0.031372549);
+    top: -10%;
+    left: -100%;
+    transform: rotate(-45deg);
+    height: 60rem;
+    transition: 0.7s all;
+  }
+  html body main .nightWrap .projectWrap .projectCard:hover {
+    opacity: 1;
+    border: 1px solid rgba(255, 255, 255, 0.2666666667);
+    box-shadow: 0 7px 50px 10px rgba(255, 255, 255, 0.2);
+    transform: scale(1.015);
+  }
+  html body main .nightWrap .projectWrap .projectCard:hover .mainCard .description {
+    opacity: 0;
+  }
+  html body main .nightWrap .projectWrap .projectCard:hover .mainCard .tokenInfo {
+    opacity: 0;
+  }
+  html body main .nightWrap .projectWrap .projectCard.card1:hover {
+    background: url("../imgs/projectBg1.png") no-repeat center;
+    background-size: contain;
+  }
+  html body main .nightWrap .projectWrap .projectCard.card2:hover {
+    background: url("../imgs/projectBg2.png") no-repeat center;
+    background-size: contain;
+  }
+  html body main .nightWrap .satelliteWrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 2500px;
+    left: 300px;
+  }
+  html body main .nightWrap .satelliteWrap .satellites {
+    position: absolute;
+    animation: rotate-axis 30s linear infinite;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+  }
+  html body main .nightWrap .satelliteWrap .satellites .satellite {
+    position: absolute;
+    width: 60px;
+    transform: rotateY(calc(var(--i) * 1deg)) translateZ(300px);
+    transition: all 0.2s;
+  }
+  html body main .nightWrap .satelliteWrap .satellites .satellite:hover {
+    width: 80px;
+  }
+  html body main .nightWrap .satelliteWrap .explainWrap {
+    position: absolute;
+    left: -200px;
+    top: 350px;
+    width: 80%;
+    height: 300px;
+    color: #fff;
+  }
+  html body main .nightWrap .satelliteWrap .explainWrap > h1 {
+    font-size: 34px;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  html body main .nightWrap .satelliteWrap .explainWrap > p {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  html body main .nightWrap .contactWrap {
+    overflow: hidden;
+    font-size: 26px;
+    font-weight: bold;
+    position: absolute;
+    top: 4500px;
+    width: 100%;
+    color: #fff;
+    height: 500px;
+  }
+  html body main .nightWrap .contactWrap .postMan {
+    position: absolute;
+    top: 10%;
+    right: 8%;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #fff455;
+    background-size: contain;
+  }
+  html body main .nightWrap .contactWrap .postManShadow {
+    position: absolute;
+    top: 10%;
+    right: 8%;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    animation: blinkMoonLight linear 3s infinite;
+    box-shadow: 0 0 20px #fff;
+  }
+  html body main .nightWrap .contactWrap .telNumber {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    letter-spacing: 4px;
+  }
+  html body main .nightWrap .contactWrap .telNumber > span {
+    letter-spacing: 0;
+    margin-right: 12px;
+  }
+  html body main .nightWrap .contactWrap .email {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    letter-spacing: 4px;
+  }
+  html body main .nightWrap .contactWrap .email > span {
+    letter-spacing: 0;
+    margin-right: 12px;
+  }
+  html body main .nightWrap .contactWrap .thanks {
+    position: absolute;
+    top: 60%;
+    left: 60%;
+    letter-spacing: 4px;
+  }
+  html body main .nightWrap .contactWrap .groundArea {
+    position: absolute;
+    bottom: 0;
+    height: 80px;
+    width: 100vw;
+  }
+  html body main .nightWrap .contactWrap .groundArea div[class^=building] {
+    position: absolute;
+    background-color: #0f1035;
+    bottom: 0;
+    height: 40px;
+  }
+  html body main .nightWrap .contactWrap .groundArea div[class^=windows] {
+    display: flex;
+    top: 8px;
+    left: 8px;
+    width: 80%;
+    height: 40px;
+    margin: 10%;
+  }
+  html body main .nightWrap .contactWrap .groundArea div[class^=windowside] {
+    height: 12px;
+    margin: 4px;
+    background-color: #dcf2f1;
+  }
+  html body main > canvas {
+    height: 5000px;
+    position: absolute;
+    margin: 0 auto;
+  }
+}/*# sourceMappingURL=main.css.map */
